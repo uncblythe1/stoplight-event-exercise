@@ -15,9 +15,10 @@ const stopColor = document.getElementById('stopLight');
 const slowColor = document.getElementById('slowLight');
 const goColor = document.getElementById('goLight');
 
-//stopColor.style.backgroundColor = 'red';
-// slowColor.style.backgroundColor = 'yellow';
-// goColor.style.backgroundColor = 'green';
+const stopContent = stopButton.innerText;
+const slowContent = slowButton.innerText;
+const goContent = goButton.innerText;
+console.log(slowContent);
 
 
 stopButton.addEventListener('click', (ev) => {
@@ -30,6 +31,32 @@ slowButton.addEventListener('click', (ev) => {
 
 goButton.addEventListener('click', (ev) => {
   goColor.classList.toggle('go');
+})
+
+
+
+stopButton.addEventListener('mouseenter', (ev) => {
+  console.log(`Entered  ${stopContent}  button`);
+})
+
+slowButton.addEventListener('mouseenter', (ev) => {
+  console.log(`Entered  ${slowContent}  button`);
+})
+
+goButton.addEventListener('mouseenter', (ev) => {
+  console.log(`Entered  ${goContent}  button`);
+})
+
+stopButton.addEventListener('mouseleave', (ev) => {
+  console.log(`Left  ${stopContent}  button`);
+})
+
+slowButton.addEventListener('mouseleave', (ev) => {
+  console.log(`Left  ${slowContent}  button`);
+})
+
+goButton.addEventListener('mouseleave', (ev) => {
+  console.log(`Left  ${goContent}  button`);
 })
 
 const allButtons = document.getElementsByClassName('button');
