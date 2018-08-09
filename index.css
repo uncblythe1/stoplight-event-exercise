@@ -28,7 +28,7 @@ body {
 }
 
 .bulb {
-  background-color: #111;
+  background-color: black;
   border-radius: 50%;
   margin: 25px auto;
   height: 150px;
